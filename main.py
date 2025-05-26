@@ -151,7 +151,8 @@ class MyPlugin(Star):
             yield event.chain_result(chain)
         else:
             filename = os.path.basename(url)  # e.g. "68057997_p0.jpg"
-            tmp_path = os.path.join('./tmp', filename)
+            tmp_path = os.path.join('/tmp', filename)
+            tmp_path = os.path.join(os.getcwd(), tmp_path)
             abs_path = os.path.abspath(tmp_path).replace('\\', '/')
 
             if not os.path.exists(tmp_path):
@@ -208,7 +209,8 @@ class MyPlugin(Star):
                         yield event.chain_result(chain)
                     else:
                         filename = os.path.basename(url)  # e.g. "68057997_p0.jpg"
-                        tmp_path = os.path.join('./tmp', filename)
+                        tmp_path = os.path.join('/tmp', filename)
+                        tmp_path = os.path.join(os.getcwd(), tmp_path)
                         abs_path = os.path.abspath(tmp_path).replace('\\', '/')
 
                         if not os.path.exists(tmp_path):
@@ -283,7 +285,8 @@ class MyPlugin(Star):
                         yield event.chain_result(chain)
                     else:
                         filename = os.path.basename(url)  # e.g. "68057997_p0.jpg"
-                        tmp_path = os.path.join('./tmp', filename)
+                        tmp_path = os.path.join('/tmp', filename)
+                        tmp_path = os.path.join(os.getcwd(), tmp_path)
                         abs_path = os.path.abspath(tmp_path).replace('\\', '/')
 
                         if not os.path.exists(tmp_path):
