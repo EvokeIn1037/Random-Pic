@@ -20,7 +20,7 @@ picjson = {
     "urls": ""
 }
 
-ALLOWED_GROUPS = { "386119495" }
+# ALLOWED_GROUPS = { "" }
 
 # --------------------------------
 # Pic Func
@@ -137,9 +137,9 @@ class MyPlugin(Star):
 
     @filter.command("pic")
     async def pic(self, event: AstrMessageEvent):
-        if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
-            yield event.plain_result("该群聊不可使用该功能")
-            return
+        # if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
+        #     yield event.plain_result("该群聊不可使用该功能")
+        #     return
 
         chat_id = event.get_sender_id()
         url = get_pic("", 0)
@@ -184,9 +184,9 @@ class MyPlugin(Star):
 
     @filter.command("tag")
     async def tag(self, event: AstrMessageEvent):
-        if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
-            yield event.plain_result("该群聊不可使用该功能")
-            return
+        # if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
+        #     yield event.plain_result("该群聊不可使用该功能")
+        #     return
 
         """这是一个 hello world 指令""" # 这是 handler 的描述，将会被解析方便用户了解插件内容。建议填写。
         message_str = event.message_str # 用户发的纯文本消息字符串
@@ -260,9 +260,9 @@ class MyPlugin(Star):
 
     @filter.command("uid")
     async def uid(self, event: AstrMessageEvent):
-        if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
-            yield event.plain_result("该群聊不可使用该功能")
-            return
+        # if event.get_group_id() and event.get_group_id() not in ALLOWED_GROUPS:
+        #     yield event.plain_result("该群聊不可使用该功能")
+        #     return
 
         """这是一个 hello world 指令""" # 这是 handler 的描述，将会被解析方便用户了解插件内容。建议填写。
         message_str = event.message_str # 用户发的纯文本消息字符串
